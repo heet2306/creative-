@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Love Story ❤️</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #ffe5ec, #ffb3c6);
+            height: 100vh;
+            color: #333;
+        }
+
+        .title {
+            text-align: center;
+            margin: 40px 0;
+            font-size: 50px;
+            color: #d6336c;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            animation: fadeIn 2s ease;
+        }
+
+        .timeline {
+            position: relative;
+            width: 80%;
+            margin: auto;
+            padding: 60px 0;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background: #ff8fab;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .timeline-item {
+            padding: 20px 40px;
+            position: relative;
+            width: 50%;
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 1s ease;
+            transition-delay: 0.5s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .timeline-item.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .timeline-item .content {
+            background: #fff;
+            border-radius: 15px;
+            padding: 25px;
+            border: 2px solid #ffb3c6;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.4s ease;
+        }
+
+        .timeline-item.left {
+            left: 0;
+        }
+
+        .timeline-item.right {
+            left: 50%;
+        }
+
+        .timeline-item .content:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .timeline-item::after {
+            content: "";
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background: #d6336c;
+            border-radius: 50%;
+            top: 20px;
+            left: -20px;
+            border: 3px solid white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .timeline-item.right::after {
+            left: calc(100% - 20px);
+        }
+
+        .timeline-item:hover::after {
+            background: #ffb3c6;
+            transform: scale(1.3);
+        }
+
+        /* Scroll Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideRight {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideLeft {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Mobile Responsive */
+        @media screen and (max-width: 768px) {
+            .timeline::after {
+                left: 10px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                padding-left: 30px;
+                padding-right: 20px;
+            }
+
+            .timeline-item.right {
+                left: 0;
+            }
+
+            .timeline-item::after,
+            .timeline-item.right::after {
+                left: 0;
+            }
+        }
+
+        /* Icons / SVG */
+        .icon {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+        }
+
+        /* Title Animations */
+        h2, h3 {
+            animation: fadeIn 1s ease;
+        }
+
+    </style>
+</head>
+<body>
+
+<h1 class="title">Our Love Story ❤️</h1>
+
+<div class="timeline">
+
+    <!-- 1 MAY – INTERVIEW -->
+    <div class="timeline-item left">
+        <div class="content">
+            <img class="icon" src="https://img.icons8.com/ios/452/meeting.png" alt="Interview">
+            <h2>📅 1 May</h2>
+            <h3>Hamari Pehli Mulakat (Interview Day) ✨</h3>
+            <p>Jab hum pehli baar mile… bilkul socha nahi tha ki yeh ek kahani ban jayegi.</p>
+        </div>
+    </div>
+
+    <!-- 18 MAY – CONFESSION -->
+    <div class="timeline-item right">
+        <div class="content">
+            <!-- SVG Icon for Confession -->
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="icon">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM12 5c.69 0 1.25.56 1.25 1.25S12.69 7.5 12 7.5 10.75 6.94 10.75 6.25 11.31 5 12 5zm0 6c-2.33 0-4.5 1.17-5.25 3.04-.52.74-.75 1.61-.75 2.46s.23 1.72.75 2.46c.75 1.87 2.92 3.04 5.25 3.04s4.5-1.17 5.25-3.04c.52-.74.75-1.61.75-2.46s-.23-1.72-.75-2.46C16.5 12.17 14.33 11 12 11z"/>
+            </svg>
+            <h2>📅 18 May</h2>
+            <h3>Confession Day ❤️</h3>
+            <p>Jis din humne apni feelings batayi… sab kuch badal gaya.</p>
+        </div>
+    </div>
+
+    <!-- 14 SEP – PAPA CONVINCE -->
+    <div class="timeline-item left">
+        <div class="content">
+            <img class="icon" src="https://img.icons8.com/ios/452/family.png" alt="Papa">
+            <h2>📅 14 September</h2>
+            <h3>Papa Ko Convince Karna 👨‍👧</h3>
+            <p>Ek bada step… jab papa maan gaye, humari journey aur beautiful ho gayi.</p>
+        </div>
+    </div>
+
+    <!-- 23 SEP – FAMILY MEETUP -->
+    <div class="timeline-item right">
+        <div class="content">
+            <img class="icon" src="https://img.icons8.com/ios/452/meeting.png" alt="Family Meetup">
+            <h2>📅 23 September</h2>
+            <h3>Family Meetup 👪</h3>
+            <p>Dono families ka milna… jitna nervous the, utna hi beautiful sab hua.</p>
+        </div>
+    </div>
+
+    <!-- 28 SEP – ROKA -->
+    <div class="timeline-item left">
+        <div class="content">
+            <!-- SVG Icon for Roka -->
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="icon">
+                <circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="2" fill="none"/>
+                <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2" fill="none"/>
+                <path d="M12 4v16" stroke="currentColor" stroke-width="2" />
+                <path d="M4 12h16" stroke="currentColor" stroke-width="2" />
+            </svg>
+            <h2>📅 28 September</h2>
+            <h3>Roka Ceremony 💍</h3>
+            <p>Officially hum ek ho gaye. Dil khushiyon se bhar gaya.</p>
+        </div>
+    </div>
+
+    <!-- 25 NOV – SHAADI -->
+    <div class="timeline-item right">
+        <div class="content">
+            <!-- SVG Icon for Wedding -->
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="icon">
+                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/>
+                <path d="M12 8l-4 4h3v4h2v-4h3l-4-4z" stroke="currentColor" stroke-width="2"/>
+            </svg>
+            <h2>📅 25 November</h2>
+            <h3>Shaadi ❤️✨</h3>
+            <p>Hamari love story ka sabse khoobsurat mod — humesha ke liye saath.</p>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    // Scroll animation
+    window.addEventListener("scroll", function () {
+        const items = document.querySelectorAll(".timeline-item");
+
+        items.forEach(item => {
+            const box = item.getBoundingClientRect();
+            if (box.top < window.innerHeight - 100) {
+                item.classList.add("show");
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
